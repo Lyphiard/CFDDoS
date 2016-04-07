@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<addon addon_id="cfddos" title="CFDDoS" version_string="1.0.2" version_id="3" url="https://lyph.io/" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
+  <admin_navigation/>
+  <admin_permissions/>
+  <admin_style_properties/>
+  <admin_templates/>
+  <admin_template_modifications/>
+  <code_events/>
+  <code_event_listeners>
+    <listener event_id="init_dependencies" execute_order="10" callback_class="CFDDoS_Listener" callback_method="init_dependencies" active="1" hint="" description=""/>
+  </code_event_listeners>
+  <cron/>
+  <email_templates/>
+  <email_template_modifications/>
+  <optiongroups>
+    <group group_id="cfddos" display_order="1" debug_only="0"/>
+    <option option_id="cfddos_api_email" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="cfddos" display_order="1"/>
+    </option>
+    <option option_id="cfddos_api_key" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="cfddos" display_order="1"/>
+    </option>
+    <option option_id="cfddos_delay" edit_format="textbox" data_type="positive_integer" can_backup="1">
+      <default_value>600</default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="cfddos" display_order="3"/>
+    </option>
+    <option option_id="cfddos_limit_load" edit_format="textbox" data_type="numeric" can_backup="1">
+      <default_value>0.4</default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="cfddos" display_order="4"/>
+    </option>
+    <option option_id="cfddos_zone" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="cfddos" display_order="2"/>
+    </option>
+  </optiongroups>
+  <permissions>
+    <permission_groups/>
+    <permissions/>
+    <interface_groups/>
+  </permissions>
+  <phrases>
+    <phrase title="option_cfddos_api_email" version_id="1" version_string="1.0"><![CDATA[CloudFlare API Email]]></phrase>
+    <phrase title="option_cfddos_api_email_explain" version_id="1" version_string="1.0"><![CDATA[The email you use to sign in to CloudFlare]]></phrase>
+    <phrase title="option_cfddos_api_key" version_id="1" version_string="1.0"><![CDATA[CloudFlare API Key]]></phrase>
+    <phrase title="option_cfddos_api_key_explain" version_id="1" version_string="1.0"><![CDATA[The API key associated with your CloudFlare account]]></phrase>
+    <phrase title="option_cfddos_delay" version_id="1" version_string="1.0"><![CDATA[Delay Time]]></phrase>
+    <phrase title="option_cfddos_delay_explain" version_id="1" version_string="1.0"><![CDATA[The number of seconds to enable "I'm under attack mode" before re-analyzing website traffic.]]></phrase>
+    <phrase title="option_cfddos_limit_load" version_id="1" version_string="1.0"><![CDATA[Server Load Threshold]]></phrase>
+    <phrase title="option_cfddos_limit_load_explain" version_id="1" version_string="1.0"><![CDATA[The maximum server load to allow before enabling protection. Set to -1 to disable.]]></phrase>
+    <phrase title="option_cfddos_zone" version_id="1" version_string="1.0"><![CDATA[CloudFlare Domain]]></phrase>
+    <phrase title="option_cfddos_zone_explain" version_id="1" version_string="1.0"><![CDATA[The domain of your XenForo installation. Do not use a subdomain here!]]></phrase>
+    <phrase title="option_group_cfddos" version_id="1" version_string="1.0"><![CDATA[CFDDoS Options]]></phrase>
+    <phrase title="option_group_cfddos_description" version_id="1" version_string="1.0"><![CDATA[]]></phrase>
+  </phrases>
+  <route_prefixes/>
+  <style_properties/>
+  <templates/>
+  <public_template_modifications/>
+  <bb_code_media_sites/>
+  <bb_codes/>
+</addon>
