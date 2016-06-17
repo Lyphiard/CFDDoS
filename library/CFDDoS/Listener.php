@@ -15,11 +15,11 @@ class CFDDoS_Listener
 			$info = array(
 				'stop_time' => 0,
 				'enabled' => false,
-                'page_views' => 0
+				'page_views' => 0
 			);
 		}
 
-        $info['page_views']++;
+		$info['page_views']++;
 
 		XenForo_Application::setSimpleCacheData('cfddos_info', $info);
 	}
