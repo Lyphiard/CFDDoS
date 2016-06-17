@@ -15,7 +15,7 @@ class CFDDoS_Cron
 			$info = array(
 				'stop_time' => 0,
 				'enabled' => false,
-                'page_views' => 0
+				'page_views' => 0
 			);
 		}
 
@@ -24,7 +24,7 @@ class CFDDoS_Cron
 			$model->enableProtection();
 			$info['stop_time'] = time() + $options->cfddos_delay;
 			$info['enabled'] = true;
-		} elseif ($info['visitor_count'] > $options->cfddos_limit_views && $options->cfddos_limit_views > 0 && !$info['enabled']) {}
+		}
 
 		if ($info['enabled']) {
 			if ($info['stop_time'] < time()) {
